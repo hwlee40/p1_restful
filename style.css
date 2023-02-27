@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Louize";
+    src: url("louize.otf");
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.gradient{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 6vh;
+    background: linear-gradient(180deg, #6a6966 0%, rgba(0, 0, 0, 0) 100%);
+    animation: 12s flicker infinite ease;
+    opacity: 60%;
+}
+@keyframes flicker {
+    0%{
+        opacity: 60%;
+    }
+    50%{
+        opacity: 40%;
+    }
+    70%{
+        opacity: 70%;
+    }
+    100%{
+        opacity: 60%;
+    }
+}
+h1{
+    margin: 0;
+    padding: 0;
+    line-height: 135%;
+    font-family: 'Louize';
+    font-size: 20px;
+    color: white;
+}
+.poemContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: e-resize;
+    flex-direction: column;
+}
+.poemInner{
+}
