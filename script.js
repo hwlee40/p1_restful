@@ -1,6 +1,18 @@
 $(document).ready(function(){
+    //INTRO SEQUENCE
+    $('.intro').click(function(){
+        document.getElementById("myAudio").play();
+        $('.intro').css('opacity', '0');
+        setTimeout(
+            function() 
+            {
+                $('.intro').css('display', 'none');
+            }, 500);
+
+    });
+
+    // POEM API
     let random = Math.floor(Math.random()*153);
-    console.log(random);
 
     $.getJSON("https://poetrydb.org/author,title/Shakespeare;Sonnet")
         .done(function(data) {
@@ -22,7 +34,7 @@ $(document).ready(function(){
         $('.poemContainer').click(function(){
             random = Math.floor(Math.random()*153);
 
-            console.log(random);
+            // console.log(random);
             $('.poemTitle').empty();
             $('.poemInner').empty();
             $('.poemTitle').append(
@@ -37,5 +49,7 @@ $(document).ready(function(){
 
         
     });
+
+    
 
 });

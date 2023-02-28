@@ -5,30 +5,62 @@
 body{
     margin: 0;
     padding: 0;
-    background: black;
+    background: rgb(0, 0, 0);
 }
 
+/* INTRO */
+.intro{
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.introInner{
+    /* background: rgb(43, 56, 88); */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.introTitle{
+    font-size: 7vw;
+    font-weight: 100;
+}
+.introSub{
+    z-index: 1000;
+    position: absolute;
+    bottom: 40px;
+    width: 100vw;
+    text-align: center;
+    opacity: 40%;
+}
+
+/* CONTENT */
 .gradient{
     position: absolute;
     top: 0;
     width: 100vw;
     height: 6vh;
-    background: linear-gradient(180deg, #6a6966 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, #ffffff 0%, rgba(0, 0, 0, 0) 100%);
     animation: 12s flicker infinite ease;
-    opacity: 60%;
+    opacity: 40%;
 }
 @keyframes flicker {
     0%{
-        opacity: 60%;
-    }
-    50%{
         opacity: 40%;
     }
+    50%{
+        opacity: 5%;
+    }
     70%{
-        opacity: 70%;
+        opacity: 12%;
     }
     100%{
-        opacity: 60%;
+        opacity: 40%;
     }
 }
 h1{
@@ -40,12 +72,19 @@ h1{
     color: white;
 }
 .poemContainer{
+    position: absolute;
+    top: 0;
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: e-resize;
+    cursor: pointer;
     flex-direction: column;
 }
 .poemInner{
+}
+.sketchContainer{
+    position: absolute;
+    top: 0;
 }

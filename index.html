@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Poetic Mound</title>
+    <script src="matter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="circle.js"></script>
+    <script src="sketch.js"></script>
+    
+    
+    
 </head>
 <body>
+    <audio id="myAudio">
+        <source src="bloop.mp3" type="audio/mpeg">
+    </audio>
+    <div class="intro">
+        <div class="introInner">
+            <h1 class="introTitle">Poetic Mound</h1>
+        </div>
+        <h1 class="introSub">Click for your first Sonnet</h1>
+    </div>
     <div class="gradient"></div>
-    <div class="poemContainer">
+    <div id="sketchContainer"></div>
+    <div onclick="playAudio()" class="poemContainer">
         <div>
             <h1 class="poemTitle"></h1>
             <h1 class="poemInner">
@@ -19,6 +36,13 @@
             </h1>
         </div>
     </div>
+
+    <script>
+        //AUDIO
+        function playAudio(){
+            document.getElementById("myAudio").play();
+        }
+    </script>
     
 </body>
 </html>
